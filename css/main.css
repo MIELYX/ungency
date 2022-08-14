@@ -39,4 +39,106 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 4em;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  height: 14px;
+  width: 18px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.hamburger__line {
+  border-radius: 1px;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+}
+
+:root {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1rem;
+  background-image: radial-gradient(72.11% 92.81% at 49.72% 48.15%, #22215b 0%, #1e1e55 33%, #141544 75%, #0c0f38 100%);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+.nav__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 0;
+}
+.nav__logo {
+  z-index: 1;
+}
+.nav__logo a {
+  display: flex;
+  padding: 0.5em;
+  padding-left: 0;
+}
+.nav__hamburger {
+  box-sizing: content-box;
+  padding: 0.5em;
+  padding-right: 0;
+  z-index: 1;
+}
+.nav__items {
+  display: none;
+}
+.nav__item {
+  padding: 1em;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+}
+.nav__item--slide {
+  font-size: 2.8rem;
+}
+.nav__btn--slide {
+  margin-top: 1.5em;
+  padding: 0.75em 1em;
+  font-size: 2.8rem;
+}
+.nav__slide-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0;
+  transform: translateX(105%);
+  background-color: #000;
+  transition: transform 1s, opacity 1s;
+}
+
+.sticky-body {
+  overflow: hidden;
+}
+
+.slide-out {
+  opacity: 1;
+  transform: translateX(0);
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,27 @@
+@use './colors' as *;
+
+.container {
+	margin: 0 auto;
+	padding: 0 4em;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.hamburger {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border: none;
+	height: 14px;
+	width: 18px;
+	background-color: transparent;
+	cursor: pointer;
+	&__line {
+		border-radius: 1px;
+		height: 2px;
+		width: 100%;
+		background-color: $pure-white;
+	}
+}
+
+
