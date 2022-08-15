@@ -47,9 +47,10 @@ section {
 	}
 	&__item {
 		padding: 1em;
+		font-family: 'Inter', sans-serif;
 		font-weight: 600;
-		color: $pure-white;
 		text-decoration: none;
+		color: $pure-white;
 		&--slide {
 			font-size: 2.8rem;
 		}
@@ -142,10 +143,10 @@ section {
 
 @media (min-width: 992px) {
 	.nav {
-		&__items{
+		&__items {
 			gap: 3em;
 		}
-		&__btn{
+		&__btn {
 			&__btn {
 				margin-left: 4em;
 			}

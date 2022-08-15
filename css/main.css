@@ -195,9 +195,10 @@ section {
 }
 .nav__item {
   padding: 1em;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
-  color: #fff;
   text-decoration: none;
+  color: #fff;
 }
 .nav__item--slide {
   font-size: 2.8rem;
