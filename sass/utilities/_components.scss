@@ -1,10 +1,27 @@
 @use './colors' as *;
+@use './mixins' as *;
 
 .container {
 	margin: 0 auto;
-	padding: 0 4em;
+	padding: 0 4rem;
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1360px;
+}
+
+.section-title {
+	font-family: 'Poppins', serif;
+	font-size: 3.2rem;
+	line-height: 1.4em;
+	font-weight: 800;
+	&--gradient {
+		@include text-gradient($primary-reverse-gradient);
+	}
+}
+
+.section-text {
+	font-family: 'Inter', serif;
+	line-height: 1.75em;
+	font-weight: 400;
 }
 
 .hamburger {
@@ -24,4 +41,65 @@
 	}
 }
 
+.btn {
+	position: relative;
+	padding: 1em;
+	border-radius: 10px;
+	font-family: 'Inter', sans-serif;
+	font-size: 1.3rem;
+	font-weight: 600;
+	text-decoration: none;
+	text-transform: capitalize;
+	background-color: $pure-white;
+	&__text {
+		@include text-gradient($primary-reverse-gradient);
+	}
+	&::before {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: -1px;
+		bottom: -1px;
+		left: -1px;
+		right: -1px;
+		border-radius: 10px;
+		opacity: 1;
+		color: $pure-white;
+		background-image: $primary-gradient;
+		transition: opacity 0.3s;
+	}
+	&:hover::before {
+		opacity: 0;
+	}
+}
 
+@media (min-width: 576px) {
+	.container {
+		padding: 0 8rem;
+	}
+	.section-title {
+		font-size: 4rem;
+	}
+	.section-text {
+		font-size: 1.4rem;
+	}
+	.btn,
+	.btn__text {
+		font-size: 1.6rem;
+	}
+}
+@media (min-width: 768px) {
+	.hamburger {
+		display: none;
+	}
+}
+
+@media (min-width:992px) {
+	.section-title {
+		font-size: 4.8rem;
+	}
+	.section-text {
+		font-size: 1.6rem;
+	}
+}

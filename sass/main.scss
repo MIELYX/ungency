@@ -2,15 +2,20 @@
 
 :root {
 	font-size: 10px;
+	background-color: $over-body-color;
 }
 
 body {
-	font-size: 1rem;
+	font-size: 1.1rem;
+	color: $pure-white;
 	background-image: $background-gradient;
 }
 
-// Nav
+section {
+	padding-bottom: 25em;
+}
 
+// Nav
 .nav {
 	position: fixed;
 	top: 0;
@@ -49,10 +54,15 @@ body {
 			font-size: 2.8rem;
 		}
 	}
-	&__btn--slide {
-		margin-top: 1.5em;
-		padding: 0.75em 1em;
-		font-size: 2.8rem;
+	&__btn {
+		&::before {
+			content: 'Contact';
+		}
+		&--slide {
+			margin-top: 1.5em;
+			padding: 0.75em 1em;
+			font-size: 2.8rem;
+		}
 	}
 	&__slide-out {
 		position: fixed;
@@ -78,4 +88,100 @@ body {
 .slide-out {
 	opacity: 1;
 	transform: translateX(0);
+}
+
+// Hero
+
+.hero {
+	padding-top: 11em;
+	&__text {
+		padding: 2em 0 6em;
+		max-width: 225px;
+	}
+	&__btn {
+		&::before {
+			content: 'Request a quote';
+		}
+	}
+	&__img {
+		display: none;
+	}
+}
+
+@media (min-width: 576px) {
+	.hero {
+		&__text {
+			max-width: 360px;
+		}
+		&__title {
+			max-width: 450px;
+		}
+	}
+}
+@media (min-width: 768px) {
+	.nav {
+		&__bar {
+			padding: 2.75em 0;
+		}
+		&__item {
+			font-size: 1.6rem;
+		}
+		&__items {
+			display: flex;
+			align-items: center;
+			gap: 1em;
+		}
+		&__btn {
+			margin-left: 3em;
+		}
+	}
+	.hero {
+		padding-top: 22em;
+	}
+}
+
+@media (min-width: 992px) {
+	.nav {
+		&__items{
+			gap: 3em;
+		}
+		&__btn{
+			&__btn {
+				margin-left: 4em;
+			}
+		}
+	}
+	.hero {
+		&__text {
+			max-width: 490px;
+		}
+		&__title {
+			max-width: 550px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.hero {
+		&__box {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		&__img--small {
+			display: block;
+			width: 500px;
+		}
+	}
+}
+
+@media (min-width: 1360px) {
+	.hero {
+		&__img {
+			display: block;
+			&--small {
+				display: none;
+			}
+		}
+	}
 }
