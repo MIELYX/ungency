@@ -1,7 +1,6 @@
 @use './utilities' as *;
 
 :root {
-	font-size: 10px;
 	background-color: $over-body-color;
 }
 
@@ -94,7 +93,7 @@ section {
 // Hero
 
 .hero {
-	padding-top: 11em;
+	padding-top: 10em;
 	&__text {
 		padding: 2em 0 6em;
 		max-width: 225px;
@@ -109,6 +108,23 @@ section {
 	}
 }
 
+// About
+
+.about {
+	&__box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__cards {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(3, 1fr);
+		gap: 30px;
+		padding-top: 8rem;
+	}
+}
+
 @media (min-width: 576px) {
 	.hero {
 		&__text {
@@ -116,6 +132,11 @@ section {
 		}
 		&__title {
 			max-width: 450px;
+		}
+	}
+	.about {
+		&__cards {
+			padding-top: 14rem;
 		}
 	}
 }
@@ -136,8 +157,9 @@ section {
 			margin-left: 3em;
 		}
 	}
+
 	.hero {
-		padding-top: 22em;
+		padding-top: 20em;
 	}
 }
 
@@ -183,6 +205,12 @@ section {
 			&--small {
 				display: none;
 			}
+		}
+	}
+	.about {
+		&__cards {
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: 1fr;
 		}
 	}
 }
