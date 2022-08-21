@@ -1,0 +1,79 @@
+@use './mixins' as *;
+@use './colors' as *;
+
+
+// Text width and font size
+
+.title {
+	// H1
+	font-family: 'Poppins';
+	font-weight: 800;
+	font-size: 4.8rem;
+
+	&-h2 {
+		font-size: 4rem;
+	}
+
+	&-h3,
+	&-h4 {
+		font-size: 2.4rem;
+	}
+
+	&-gradient {
+		@include text-gradient($primary-reverse-gradient);
+	}
+}
+
+.text {
+	// Descriptions
+	font-family: 'Inter';
+	font-weight: 400;
+
+	// Text next to checkbox under contact form
+	&-small {
+		font-size: 1.2rem;
+	}
+
+	// Buttons and nav elements
+	&-other {
+		font-weight: 600;
+
+		// Slide out nav elements
+		&-slide {
+			font-size: 2.8rem;
+		}
+	}
+	&-gradient {
+		@include text-gradient($primary-reverse-gradient);
+	}
+}
+
+.text-width {
+	// H1
+	max-width: 600px;
+	&-hero {
+		max-width: 420px;
+	}
+	&-about {
+		max-width: 400px;
+	}
+	&-works {
+		max-width: 350px;
+	}
+	&-team {
+		max-width: 390px;
+	}
+	&-contact {
+		max-width: 370px;
+	}
+	&-card {
+		max-width: 260px;
+	}
+
+	&-about,
+	&-works,
+	&-team,
+	&-contact {
+		text-align: center;
+	}
+}

@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@800&display=swap"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
     <title>Ungency.eu</title>
 </head>
@@ -24,17 +24,23 @@
                     <div class="hamburger__line hamburger__line--bottom"></div>
                 </button>
                 <div class="nav__items">
-                    <a href="#about" class="nav__item">About</a>
-                    <a href="#works" class="nav__item">Works</a>
-                    <a href="#team" class="nav__item">Team</a>
-                    <a href="#contact" class="btn nav__btn"><span class="btn__text">Contact</span></a>
+                    <a href="#about" class="nav__item text text-other">About</a>
+                    <a href="#works" class="nav__item text text-other">Works</a>
+                    <a href="#team" class="nav__item text text-other">Team</a>
+                    <a href="#contact" class="btn nav__btn">
+                        <div class="btn__front"><span class="text text-other">Contact</span></div>
+                        <div class="btn__reverse"><span class="text text-other text-gradient">Contact</span></div>
+                    </a>
                 </div>
                 <div class="nav__slide-out">
-                    <a href="#about" class="nav__item nav__item--slide item">About</a>
-                    <a href="#works" class="nav__item nav__item--slide item">Works</a>
-                    <a href="#team" class="nav__item nav__item--slide item">Team</a>
-                    <a href="#contact" class="btn nav__btn nav__btn--slide item"><span
-                            class="btn__text">Contact</span></a>
+                    <a href="#about" class="nav__item text text-other text-other-slide item">About</a>
+                    <a href="#works" class="nav__item text text-other text-other-slide item">Works</a>
+                    <a href="#team" class="nav__item text text-other text-other-slide item">Team</a>
+                    <a href="#contact" class="btn nav__btn item">
+                        <div class="btn__front"><span class="text text-other text-other-slide">Contact</span></div>
+                        <div class="btn__reverse"><span
+                                class="text text-other text-other-slide text-gradient">Contact</span></div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -44,78 +50,71 @@
             <div class="container">
                 <div class="hero__box">
                     <div class="hero__textbox">
-                        <h1 class="section-title hero__title">We turn websites into thriving <span
-                                class="section-title section-title--gradient">businesses</span></h1>
-                        <p class="section-text hero__text">We are an unlimited agency that turns good ideas into viable
-                            businesses.
-                            Make an appointment with us and let's talk about your project, we are sure you will not be
-                            disappointed.</p>
-                        <a href="#" class="btn hero__btn"><span class="btn__text">Request a quote</span></a>
+                        <h1 class="title text-width">Creating websites from your <span
+                                class="title title-gradient">great ideas</span></h1>
+                        <p class="text hero__text text-width-hero">We plan, design, program your technology
+                            ideas and make them see the light of day. Simply digital products for the Blockchain world.
+                        </p>
+                        <a href="#" class="btn hero__btn">
+                            <div class="btn__front"><span class="text text-other">Request a quote</span></div>
+                            <div class="btn__reverse"><span class="text text-other text-gradient">Request a quote</span>
+                            </div>
+                        </a>
                     </div>
-                    <img class="hero__img hero__img--small" src="./img/laptop-small.svg" alt="">
-                    <img class="hero__img" src="./img/laptop.svg" alt="">
                 </div>
             </div>
         </section>
         <section class="about" id="about">
-            <section>
-                <div class="container">
-                    <div class="about__box">
-                        <div class="about__textbox textbox">
-                            <h2 class="section-title section-title--h2">About <span
-                                    class="section-title section-title--h2 section-title--gradient">Us</span></h2>
-                            <p class="section-text">We are creators who are not fans of ready-made solutions and all
-                                work is created during a decently thought-out creative process.</p>
+            <div class="container">
+                <div class="about__box">
+                    <div class="text-width-about">
+                        <h2 class="title title-h2">About us</h2>
+                        <p class="text">We are creators who are not fans of ready-made solutions, and all works
+                            are created through a thoughtful creative process.</p>
+                    </div>
+                    <div class="about__cards">
+                        <div class="card about__card">
+                            <div class="card__bg"></div>
+                            <div class="card__body">
+                                <img src="./img/magnifier-small.svg" alt="" class="card__img card__img--small">
+                                <img src="./img/magnifier-medium.svg" alt="" class="card__img card__img--medium">
+                                <div class="text-width-card">
+                                    <h3 class="title title-h3">UX Research</h3>
+                                    <p class="text">This stage is responsible for researching business
+                                        needs and discovering the project's target audience.</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="about__cards">
-                            <div class="card about__card">
-                                <div class="card__bg"></div>
-                                <div class="card__body">
-
-                                    <img src="./img/magnifier-small.svg" alt="" class="card__img card__img--small">
-                                    <img src="./img/magnifier-medium.svg" alt="" class="card__img card__img--medium">
-                                    <div class="card__textbox">
-                                        <h3 class="section-title section-title--h3">UX Research</h3>
-                                        <p class="section-text">This stage is responsible for researching business
-                                            needs and discovering the project's target audience.</p>
-                                    </div>
-
+                        <div class="card about__card">
+                            <div class="card__bg"></div>
+                            <div class="card__body">
+                                <img src="./img/smartphone-small.svg" alt=""
+                                    class="card__img card__img--small card__img--middle">
+                                <img src="./img/smartphone-medium.svg" alt=""
+                                    class="card__img card__img--medium card__img--middle">
+                                <div class="text-width-card">
+                                    <h3 class="title title-h3">User Interface</h3>
+                                    <p class="text">Here we build an interactive interface design that
+                                        consists of style guides and all the data we analyzed earlier.</p>
                                 </div>
                             </div>
-                            <div class="card about__card">
-                                <div class="card__bg"></div>
-                                <div class="card__body">
-
-                                    <img src="./img/smartphone-small.svg" alt="" class="card__img card__img--small card__img--middle">
-                                    <img src="./img/smartphone-medium.svg" alt="" class="card__img card__img--medium card__img--middle">
-                                    <div class="card__textbox">
-                                        <h3 class="section-title section-title--h3">User Interface</h3>
-                                        <p class="section-text">Here we build an interactive interface design that
-                                            consists of style guides and all the data we analyzed earlier.</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="card about__card">
-                                <div class="card__bg"></div>
-                                <div class="card__body">
-
-                                    <img src="./img/smartphone2-small.svg" alt="" class="card__img card__img--small">
-                                    <img src="./img/smartphone2-medium.svg" alt="" class="card__img card__img--medium">
-                                    <div class="card__textbox">
-                                        <h3 class="section-title section-title--h3">Web Development</h3>
-                                        <p class="section-text">This is the final straightforward in creating a
-                                            finished project for you, it is simply turning a project into a truly
-                                            prosperous site.</p>
-                                    </div>
-
+                        </div>
+                        <div class="card about__card">
+                            <div class="card__bg"></div>
+                            <div class="card__body">
+                                <img src="./img/smartphone2-small.svg" alt="" class="card__img card__img--small">
+                                <img src="./img/smartphone2-medium.svg" alt="" class="card__img card__img--medium">
+                                <div class="text-width-card">
+                                    <h3 class="title title-h3">Web Development</h3>
+                                    <p class="text">This is the final straightforward in creating a
+                                        finished project for you, it is simply turning a project into a truly
+                                        prosperous site.</p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </section>
     </main>
     <script src="./js/main.js"></script>

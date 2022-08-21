@@ -6,14 +6,19 @@
 	padding: 0;
 }
 
-
 html {
 	font-size: 10px;
 	scroll-behavior: smooth;
+	scroll-padding: 10em;
 }
 
 a {
 	text-decoration: none;
+	color: #fff;
+}
+
+img {
+	height: auto;
 }
 
 input,

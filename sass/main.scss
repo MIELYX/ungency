@@ -1,13 +1,12 @@
 @use './utilities' as *;
 
 :root {
-	background-color: $over-body-color;
+	background-color: $primary-color;
 }
 
 body {
-	font-size: 1.1rem;
-	color: $pure-white;
-	background-image: $background-gradient;
+	font-size: 1.6rem;
+	color: $text-color;
 }
 
 section {
@@ -15,17 +14,15 @@ section {
 }
 
 // Nav
+
 .nav {
-	position: fixed;
-	top: 0;
-	left: 0;
+	@include positioning($pos: fixed);
 	width: 100%;
+	background-color: $primary-color;
 	z-index: 1;
 	&__bar {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 1.5em 0;
+		@include display-flex($jc: space-between, $ai: center);
+		padding: 1.25em 0;
 	}
 	&__logo {
 		z-index: 1;
@@ -37,7 +34,7 @@ section {
 	}
 	&__hamburger {
 		box-sizing: content-box;
-		padding: 0.5em;
+		padding: 1em;
 		padding-right: 0;
 		z-index: 1;
 	}
@@ -46,38 +43,19 @@ section {
 	}
 	&__item {
 		padding: 1em;
-		font-family: 'Inter', sans-serif;
-		font-weight: 600;
-		text-decoration: none;
-		color: $pure-white;
-		&--slide {
-			font-size: 2.8rem;
-		}
-	}
-	&__btn {
-		&::before {
-			content: 'Contact';
-		}
-		&--slide {
-			margin-top: 1.5em;
-			padding: 0.75em 1em;
-			font-size: 2.8rem;
-		}
 	}
 	&__slide-out {
-		position: fixed;
-		top: 0;
-		left: 0;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		@include positioning($pos: fixed);
+		@include display-flex($fd: column, $jc: center, $ai: center);
 		height: 100vh;
 		width: 100vw;
 		opacity: 0;
 		transform: translateX(105%);
-		background-color: $pure-black;
+		background-color: $slide-out-nav-color;
 		transition: transform 1s, opacity 1s;
+	}
+	&__btn {
+		margin-top: 2em;
 	}
 }
 
@@ -93,18 +71,9 @@ section {
 // Hero
 
 .hero {
-	padding-top: 10em;
+	padding-top: 8em;
 	&__text {
-		padding: 2em 0 6em;
-		max-width: 225px;
-	}
-	&__btn {
-		&::before {
-			content: 'Request a quote';
-		}
-	}
-	&__img {
-		display: none;
+		padding: 1.5em 0 5em;
 	}
 }
 
@@ -112,101 +81,50 @@ section {
 
 .about {
 	&__box {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		@include display-flex($fd: column, $ai: center);
 	}
 	&__cards {
+		width: 100%;
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(3, 1fr);
+		justify-items: center;
 		gap: 30px;
-		padding-top: 8rem;
+		padding-top: 10rem;
 	}
 }
 
 @media (min-width: 576px) {
-	.hero {
-		&__text {
-			max-width: 360px;
-		}
-		&__title {
-			max-width: 450px;
+	.nav {
+		&__bar{
+			padding: 2em 0;
 		}
 	}
-	.about {
-		&__cards {
-			padding-top: 14rem;
-		}
+	.hero {
+		padding-top: 12em;
 	}
 }
+
 @media (min-width: 768px) {
-	.nav {
-		&__bar {
-			padding: 2.75em 0;
-		}
-		&__item {
-			font-size: 1.6rem;
+	.sticky-body {
+		overflow: visible;
+	}
+	.nav{
+		&__hamburger, &__slide-out {
+			display: none;
 		}
 		&__items {
 			display: flex;
-			align-items: center;
-			gap: 1em;
+			gap: 2em;
 		}
 		&__btn {
-			margin-left: 3em;
-		}
-	}
-
-	.hero {
-		padding-top: 20em;
-	}
-}
-
-@media (min-width: 992px) {
-	.nav {
-		&__items {
-			gap: 3em;
-		}
-		&__btn {
-			&__btn {
-				margin-left: 4em;
-			}
-		}
-	}
-	.hero {
-		&__text {
-			max-width: 490px;
-		}
-		&__title {
-			max-width: 550px;
-		}
-	}
-}
-
-@media (min-width: 1200px) {
-	.hero {
-		&__box {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-		}
-		&__img--small {
-			display: block;
-			width: 500px;
+			margin-left: 2em;
+			margin-top: 0;
 		}
 	}
 }
 
 @media (min-width: 1360px) {
-	.hero {
-		&__img {
-			display: block;
-			&--small {
-				display: none;
-			}
-		}
-	}
 	.about {
 		&__cards {
 			grid-template-columns: repeat(3, 1fr);

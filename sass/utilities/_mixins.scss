@@ -12,3 +12,23 @@
 	right: -$px;
 	filter: blur($blur);
 }
+
+@mixin positioning($pos: absolute, $t: 0, $l: 0) {
+	position: $pos;
+	top: $t;
+	left: $l;
+}
+
+@mixin positioning($pos: absolute, $t: 0, $l: 0) {
+	position: $pos;
+	top: $t;
+	left: $l;
+}
+
+
+@mixin display-flex($fd: row, $jc: flex-start, $ai: stretch) {
+	display: flex;
+	flex-direction: $fd;
+	justify-content: $jc;
+	align-items: $ai;
+}
