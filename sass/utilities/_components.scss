@@ -108,13 +108,14 @@
 	}
 	&__shadow {
 		transform: translateX(-50%);
+		width: 110%;
 		filter: $profile-img-shadow;
 	}
 	&__bart {
 		@include positioning($t: 3%, $l: 55%);
 	}
 	&__casper {
-		@include positioning($t: -3%, $l: 53%);
+		@include positioning($t: 3px, $l: 52.5%);
 	}
 	&__description {
 		@include display-flex($fd: column, $ai: center);

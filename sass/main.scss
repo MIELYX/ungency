@@ -18,7 +18,6 @@ section {
 .nav {
 	@include positioning($pos: fixed);
 	width: 100%;
-	background-color: $primary-color;
 	z-index: 1;
 	&__bar {
 		@include display-flex($jc: space-between, $ai: center);
@@ -105,11 +104,10 @@ section {
 		@include display-flex($fd: column, $ai: center);
 	}
 	&__profiles {
-		padding: 0 7.5em;
-		padding-top: 14rem;
-		width: 100%;
 		@include display-flex($fd: row, $jc: space-around, $ai: center);
 		flex-wrap: wrap;
+		padding-top: 14rem;
+		width: 100%;
 		gap: 50px;
 	}
 }

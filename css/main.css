@@ -226,6 +226,7 @@ table {
 }
 .profile__shadow {
   transform: translateX(-50%);
+  width: 110%;
   filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.04)) drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.08));
 }
 .profile__bart {
@@ -235,8 +236,8 @@ table {
 }
 .profile__casper {
   position: absolute;
-  top: -3%;
-  left: 53%;
+  top: 3px;
+  left: 52.5%;
 }
 .profile__description {
   display: flex;
@@ -280,7 +281,6 @@ section {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #1c0b4e;
   z-index: 1;
 }
 .nav__bar {
@@ -371,14 +371,13 @@ section {
   align-items: center;
 }
 .team__profiles {
-  padding: 0 7.5em;
-  padding-top: 14rem;
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  padding-top: 14rem;
+  width: 100%;
   gap: 50px;
 }
 
