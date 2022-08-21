@@ -1,7 +1,6 @@
 @use './mixins' as *;
 @use './colors' as *;
 
-
 // Text width and font size
 
 .title {
@@ -53,6 +52,12 @@
 	}
 	&-gradient {
 		@include text-gradient($primary-reverse-gradient);
+	}
+	&-600 {
+		font-weight: 600;
+	}
+	&-700 {
+		font-weight: 700;
 	}
 }
 

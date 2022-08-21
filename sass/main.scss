@@ -113,6 +113,24 @@ section {
 	}
 }
 
+// Fotter
+
+.fotter {
+	padding: 3.5em 0;
+	background-color: $fotter-color;
+	a,
+	p {
+		padding: 1em;
+	}
+	&__box {
+		@include display-flex($fd: column, $jc: space-between, $ai: center);
+		gap: 50px;
+	}
+	&__links {
+		@include display-flex($ai: center);
+	}
+}
+
 @media (min-width: 576px) {
 	.hero {
 		padding-top: 12em;
@@ -142,6 +160,12 @@ section {
 @media (min-width: 992px) {
 	.hero {
 		padding-top: 16em;
+	}
+	.fotter {
+		padding: 2em 0;
+		&__box {
+			flex-direction: row;
+		}
 	}
 }
 
