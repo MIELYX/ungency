@@ -80,6 +80,10 @@ section {
 // About
 
 .about {
+	// Card title
+	h3 {
+		font-size: 2.4rem;
+	}
 	&__box {
 		@include display-flex($fd: column, $ai: center);
 	}
@@ -90,13 +94,29 @@ section {
 		grid-template-rows: repeat(3, 1fr);
 		justify-items: center;
 		gap: 30px;
-		padding-top: 10rem;
+		padding-top: 14rem;
+	}
+}
+
+// Team
+
+.team {
+	&__box {
+		@include display-flex($fd: column, $ai: center);
+	}
+	&__profiles {
+		padding: 0 7.5em;
+		padding-top: 14rem;
+		width: 100%;
+		@include display-flex($fd: row, $jc: space-around, $ai: center);
+		flex-wrap: wrap;
+		gap: 50px;
 	}
 }
 
 @media (min-width: 576px) {
 	.nav {
-		&__bar{
+		&__bar {
 			padding: 2em 0;
 		}
 	}
@@ -109,18 +129,25 @@ section {
 	.sticky-body {
 		overflow: visible;
 	}
-	.nav{
-		&__hamburger, &__slide-out {
+	.nav {
+		&__hamburger,
+		&__slide-out {
 			display: none;
 		}
 		&__items {
-			display: flex;
+			@include display-flex($ai: center);
 			gap: 2em;
 		}
 		&__btn {
 			margin-left: 2em;
 			margin-top: 0;
 		}
+	}
+}
+
+@media (min-width: 992px) {
+	.hero {
+		padding-top: 16em;
 	}
 }
 

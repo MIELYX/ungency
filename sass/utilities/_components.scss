@@ -28,7 +28,7 @@
 	display: inline;
 	&__front,
 	&__reverse {
-		padding: 1em;
+		padding: 0.5em 1em;
 		border-radius: 10px;
 	}
 	&__front {
@@ -96,9 +96,49 @@
 	}
 }
 
+.profile {
+	width: 100%;
+	max-width: 278px;
+	&__circle {
+		position: relative;
+		border-radius: 50%;
+		padding-bottom: 100%;
+		background-color: $secondary-color;
+		overflow: hidden;
+	}
+	&__shadow {
+		transform: translateX(-50%);
+		filter: $profile-img-shadow;
+	}
+	&__bart {
+		@include positioning($t: 3%, $l: 55%);
+	}
+	&__casper {
+		@include positioning($t: -3%, $l: 53%);
+	}
+	&__description {
+		@include display-flex($fd: column, $ai: center);
+		margin-top: 1.25em;
+	}
+	&__links{
+		display: flex;
+		gap: 10px;
+		margin-top: 1.25em;
+	}
+}
 
 @media (min-width: 576px) {
 	.container {
 		padding: 0 8rem;
+	}
+	.card {
+		&__img {
+			&--small {
+				display: none;
+			}
+			&--medium {
+				display: block;
+			}
+		}
 	}
 }
