@@ -18,10 +18,11 @@ section {
 .nav {
 	@include positioning($pos: fixed);
 	width: 100%;
+	background-color: $primary-color;
 	z-index: 1;
 	&__bar {
 		@include display-flex($jc: space-between, $ai: center);
-		padding: 1.25em 0;
+		padding: 0.5em 0;
 	}
 	&__logo {
 		z-index: 1;
@@ -113,11 +114,6 @@ section {
 }
 
 @media (min-width: 576px) {
-	.nav {
-		&__bar {
-			padding: 2em 0;
-		}
-	}
 	.hero {
 		padding-top: 12em;
 	}
