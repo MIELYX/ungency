@@ -141,7 +141,7 @@
 	&__content {
 		@include display-flex($jc: space-between);
 		gap: 10px;
-		padding: 5% 5% 5%;
+		padding: 7.5% 5%;
 		border-bottom-left-radius: 15px;
 		border-bottom-right-radius: 15px;
 		background-color: $secondary-color;
@@ -183,7 +183,7 @@
 @media (min-width: 425px) {
 	.work-item {
 		&__content {
-			padding: 5% 5% 7.5%;
+			padding: 7% 5%;
 		}
 		&__links {
 			img {
