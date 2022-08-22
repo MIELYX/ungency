@@ -18,11 +18,15 @@
 		font-size: 3.2rem;
 		line-height: 48px;
 	}
+
 	&-h4 {
 		font-size: 2.4rem;
 		line-height: 28px;
 	}
-
+	&-h4-card {
+		font-size: 1.6rem;
+		line-height: 1em;
+	}
 	&-gradient {
 		@include text-gradient($primary-reverse-gradient);
 	}
@@ -32,9 +36,11 @@
 	// Descriptions
 	font-family: 'Inter';
 	font-weight: 400;
+	font-size: 1.6rem;
 	line-height: 150%;
 
 	// Text next to checkbox under contact form
+
 	&-small {
 		font-size: 1.2rem;
 		line-height: 14px;
@@ -50,6 +56,12 @@
 			font-size: 2.8rem;
 		}
 	}
+
+	&-card {
+		font-size: 1rem;
+		line-height: 1em;
+	}
+
 	&-gradient {
 		@include text-gradient($primary-reverse-gradient);
 	}
@@ -82,11 +94,33 @@
 	&-card {
 		max-width: 260px;
 	}
+	&-item{
+		max-width: 190px;
+	}
 
 	&-about,
 	&-works,
 	&-team,
 	&-contact {
 		text-align: center;
+	}
+}
+
+@media (min-width: 420px) {
+	.title-h4-card {
+		font-size: 2.4rem;
+	}
+	.text-card {
+		font-size: 1.6rem;
+	}
+	.text-width-item {
+		max-width: 320px;
+	}
+}
+@media (min-width:1200px){
+	.text-width{
+		&-works {
+			text-align: left;
+		}
 	}
 }

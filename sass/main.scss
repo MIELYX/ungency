@@ -113,6 +113,41 @@ section {
 	}
 }
 
+// Works
+
+.works {
+	overflow: hidden;
+	&__box {
+		@include display-flex($fd: column);
+	}
+	&__items {
+		position: relative;
+		display: flex;
+		@include display-flex($jc: space-evenly);
+		padding-top: 14rem;
+		pointer-events: none;
+	}
+	&__item {
+		opacity: 0;
+		transition: opacity 0.5s;
+	}
+	&__togglers,
+	&__textbox {
+		margin: 0 auto;
+	}
+	&__togglers {
+		margin-top: 3em;
+		button {
+			padding: 0.5em;
+		}
+	}
+	.show {
+		position: absolute;
+		opacity: 1;
+		pointer-events: auto;
+	}
+}
+
 // Fotter
 
 .fotter {
@@ -150,6 +185,9 @@ section {
 			@include display-flex($ai: center);
 			gap: 2em;
 		}
+		&__item {
+			pointer-events: auto;
+		}
 		&__btn {
 			margin-left: 2em;
 			margin-top: 0;
@@ -165,6 +203,45 @@ section {
 		padding: 2em 0;
 		&__box {
 			flex-direction: row;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.works {
+		&__box {
+			position: relative;
+		}
+		&__items {
+			left: 40%;
+			padding: 0;
+		}
+		&__item {
+			order: 1;
+			opacity: 1;
+			transform: scale(0.85);
+			transition: order 1s, transform 1s;
+			pointer-events: auto;
+		}
+		&__textbox {
+			position: absolute;
+			top: 20%;
+		}
+		&__togglers {
+			display: none;
+		}
+		.show {
+			position: static;
+		}
+		.swap {
+			order: 0;
+			transform: scale(1);
+			pointer-events: none;
+		}
+		.work-item {
+			&__links {
+				pointer-events: visible;
+			}
 		}
 	}
 }
