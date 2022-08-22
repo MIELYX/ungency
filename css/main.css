@@ -224,9 +224,9 @@ table {
 .card__body {
   position: relative;
   display: grid;
-  grid-template-rows: auto;
+  grid-template-rows: 1fr 1fr;
   justify-items: center;
-  align-items: center;
+  align-items: flex-end;
   gap: 30px;
   padding: 12.5% 7.5%;
   width: 100%;
@@ -427,7 +427,7 @@ section {
   width: 100vw;
   opacity: 0;
   transform: translateX(105%);
-  background-color: #000;
+  background-color: #1c0b4e;
   transition: transform 1s, opacity 1s;
 }
 .nav__btn {
