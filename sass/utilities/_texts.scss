@@ -12,6 +12,7 @@
 
 	&-h2 {
 		font-size: 4rem;
+		padding-bottom: 0.5em;
 	}
 
 	&-h3 {
@@ -59,7 +60,6 @@
 
 	&-card {
 		font-size: 1rem;
-		line-height: 1em;
 	}
 
 	&-gradient {
@@ -106,7 +106,7 @@
 	}
 }
 
-@media (min-width: 420px) {
+@media (min-width: 425px) {
 	.title-h4-card {
 		font-size: 2.4rem;
 	}
