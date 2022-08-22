@@ -148,6 +148,98 @@ section {
 	}
 }
 
+// Contact
+
+.contact {
+	&__items {
+		@include display-flex($fd: column);
+		gap: 80px;
+		h4 {
+			position: relative;
+			padding-left: 10px;
+		}
+		h4::before {
+			content: '';
+			@include positioning;
+			height: 100%;
+			width: 6px;
+			border-radius: 20px;
+			transform: translateX(-100%);
+			background-color: $secondary-color;
+		}
+	}
+	&__box {
+		@include display-flex($fd: column, $ai: center);
+	}
+	&__content {
+		display: grid;
+		justify-content: start;
+		gap: 80px;
+		padding-top: 19rem;
+		width: 100%;
+	}
+	&__title {
+		text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+	}
+
+	&__value {
+		@include display-flex($ai: center);
+		gap: 10px;
+		padding-top: 20px;
+		padding-left: 10px;
+		&--links {
+			gap: 20px;
+		}
+	}
+	&__form {
+		width: 100%;
+		max-width: 380px;
+		.title {
+			margin-bottom: 30px;
+		}
+		label {
+			display: block;
+			padding-bottom: 10px;
+		}
+		input,
+		textarea {
+			width: 100%;
+			padding: 14px;
+			border-radius: 10px;
+			background-color: $secondary-color;
+			border: 2px solid $teritary-color;
+			&:focus {
+				outline: none;
+			}
+			&::placeholder {
+				font-size: 1.6rem;
+				color: $placeholder-color;
+			}
+		}
+		input {
+			height: 4.8rem;
+			margin-bottom: 20px;
+		}
+		input[type='checkbox'] {
+			width: 16px;
+			height: 16px;
+		}
+		textarea {
+			height: 120px;
+		}
+	}
+	&__checkbox {
+		input,
+		label {
+			padding: 0;
+			margin: 0;
+		}
+		@include display-flex($jc: center, $ai: center);
+		gap: 15px;
+		padding: 20px 0;
+	}
+}
+
 // Fotter
 
 .fotter {
@@ -193,6 +285,10 @@ section {
 			margin-top: 0;
 		}
 	}
+	.contact {
+		&__content {
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -203,6 +299,13 @@ section {
 		padding: 2em 0;
 		&__box {
 			flex-direction: row;
+		}
+	}
+	.contact {
+		&__content {
+			grid-template-columns: auto minmax(0, 380px);
+			justify-content: center;
+			gap: 50px;
 		}
 	}
 }

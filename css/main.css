@@ -22,6 +22,7 @@ button,
 textarea,
 select {
   font-family: inherit;
+  color: inherit;
 }
 
 button {
@@ -117,7 +118,7 @@ table {
   max-width: 390px;
 }
 .text-width-contact {
-  max-width: 370px;
+  max-width: 360px;
 }
 .text-width-card {
   max-width: 260px;
@@ -524,6 +525,117 @@ section {
   pointer-events: auto;
 }
 
+.contact__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 80px;
+}
+.contact__items h4 {
+  position: relative;
+  padding-left: 10px;
+}
+.contact__items h4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 6px;
+  border-radius: 20px;
+  transform: translateX(-100%);
+  background-color: #3f306b;
+}
+.contact__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.contact__content {
+  display: grid;
+  justify-content: start;
+  gap: 80px;
+  padding-top: 19rem;
+  width: 100%;
+}
+.contact__title {
+  text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+}
+.contact__value {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+.contact__value--links {
+  gap: 20px;
+}
+.contact__form {
+  width: 100%;
+  max-width: 380px;
+}
+.contact__form .title {
+  margin-bottom: 30px;
+}
+.contact__form label {
+  display: block;
+  padding-bottom: 10px;
+}
+.contact__form input,
+.contact__form textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  background-color: #3f306b;
+  border: 2px solid #241256;
+}
+.contact__form input:focus,
+.contact__form textarea:focus {
+  outline: none;
+}
+.contact__form input::-moz-placeholder, .contact__form textarea::-moz-placeholder {
+  font-size: 1.6rem;
+  color: #acb5bd;
+}
+.contact__form input:-ms-input-placeholder, .contact__form textarea:-ms-input-placeholder {
+  font-size: 1.6rem;
+  color: #acb5bd;
+}
+.contact__form input::placeholder,
+.contact__form textarea::placeholder {
+  font-size: 1.6rem;
+  color: #acb5bd;
+}
+.contact__form input {
+  height: 4.8rem;
+  margin-bottom: 20px;
+}
+.contact__form input[type=checkbox] {
+  width: 16px;
+  height: 16px;
+}
+.contact__form textarea {
+  height: 120px;
+}
+.contact__checkbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 0;
+}
+.contact__checkbox input,
+.contact__checkbox label {
+  padding: 0;
+  margin: 0;
+}
+
 .fotter {
   padding: 3.5em 0;
   background-color: rgba(255, 255, 255, 0.05);
@@ -582,6 +694,11 @@ section {
   }
   .fotter__box {
     flex-direction: row;
+  }
+  .contact__content {
+    grid-template-columns: auto minmax(0, 380px);
+    justify-content: center;
+    gap: 50px;
   }
 }
 @media (min-width: 1200px) {
