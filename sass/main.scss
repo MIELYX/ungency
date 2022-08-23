@@ -19,10 +19,10 @@ section {
 	@include positioning($pos: fixed);
 	width: 100%;
 	background-color: $primary-color;
-	z-index: 1;
+	z-index: 2;
 	&__bar {
 		@include display-flex($jc: space-between, $ai: center);
-		padding: 0.5em 0;
+		padding: 12px 0;
 	}
 	&__logo {
 		z-index: 1;
@@ -74,6 +74,10 @@ section {
 	padding-top: 8em;
 	&__text {
 		padding: 1.5em 0 5em;
+	}
+	&__img {
+		height: 379;
+		width: 418px;
 	}
 }
 
@@ -190,6 +194,12 @@ section {
 		padding-left: 10px;
 		&--links {
 			gap: 20px;
+			a{
+				transition: transform 0.3s;
+			}
+			a:hover {
+				transform: scale(1.25);
+			}
 		}
 	}
 	&__form {
@@ -270,7 +280,7 @@ section {
 // Fotter
 
 .fotter {
-	padding: 3.5em 0;
+	padding: 3em 0;
 	background-color: $fotter-color;
 	a,
 	p {
@@ -282,6 +292,12 @@ section {
 	}
 	&__links {
 		@include display-flex($ai: center);
+		a{
+			transition: transform 0.3s;
+		}
+		a:hover {
+			transform: scale(1.25);
+		}
 	}
 }
 
@@ -326,7 +342,7 @@ section {
 		padding-top: 16em;
 	}
 	.fotter {
-		padding: 2em 0;
+		padding: 14px 0;
 		&__box {
 			flex-direction: row;
 		}
@@ -335,6 +351,7 @@ section {
 
 @media (min-width: 1200px) {
 	.works {
+		padding-top: 9em;
 		&__box {
 			position: relative;
 		}
@@ -364,6 +381,30 @@ section {
 		}
 		.show {
 			position: relative;
+		}
+		.swap1 {
+			left: -47%;
+			transform: scale(1);
+			pointer-events: none;
+			z-index: 0;
+		}
+		.swap2 {
+			left: 47%;
+			transform: scale(0.85);
+			pointer-events: auto;
+			z-index: 1;
+		}
+		.swap3 {
+			left: 0;
+			transform: scale(0.85);
+			pointer-events: auto;
+			z-index: 1;
+		}
+		.swap4 {
+			left: 0;
+			transform: scale(1);
+			pointer-events: none;
+			z-index: 0;
 		}
 		.work-item {
 			&__links {

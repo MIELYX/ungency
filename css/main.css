@@ -9,7 +9,7 @@
 html {
   font-size: 10px;
   scroll-behavior: smooth;
-  scroll-padding: 8em;
+  scroll-padding: 8.5em;
 }
 
 a {
@@ -81,7 +81,7 @@ table {
 }
 .text-other {
   font-weight: 600;
-  line-height: 34px;
+  line-height: 200%;
 }
 .text-other-slide {
   font-size: 2.8rem;
@@ -387,14 +387,14 @@ section {
   left: 0;
   width: 100%;
   background-color: #1c0b4e;
-  z-index: 1;
+  z-index: 2;
 }
 .nav__bar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5em 0;
+  padding: 12px 0;
 }
 .nav__logo {
   z-index: 1;
@@ -449,6 +449,10 @@ section {
 }
 .hero__text {
   padding: 1.5em 0 5em;
+}
+.hero__img {
+  height: 379;
+  width: 418px;
 }
 
 .about h3 {
@@ -576,6 +580,12 @@ section {
 .contact__value--links {
   gap: 20px;
 }
+.contact__value--links a {
+  transition: transform 0.3s;
+}
+.contact__value--links a:hover {
+  transform: scale(1.25);
+}
 .contact__form {
   width: 100%;
 }
@@ -664,7 +674,7 @@ section {
 }
 
 .fotter {
-  padding: 3.5em 0;
+  padding: 3em 0;
   background-color: rgba(255, 255, 255, 0.05);
 }
 .fotter a,
@@ -683,6 +693,12 @@ section {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+}
+.fotter__links a {
+  transition: transform 0.3s;
+}
+.fotter__links a:hover {
+  transform: scale(1.25);
 }
 
 @media (min-width: 576px) {
@@ -722,13 +738,16 @@ section {
     padding-top: 16em;
   }
   .fotter {
-    padding: 2em 0;
+    padding: 14px 0;
   }
   .fotter__box {
     flex-direction: row;
   }
 }
 @media (min-width: 1200px) {
+  .works {
+    padding-top: 9em;
+  }
   .works__box {
     position: relative;
   }
@@ -758,6 +777,30 @@ section {
   }
   .works .show {
     position: relative;
+  }
+  .works .swap1 {
+    left: -47%;
+    transform: scale(1);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .works .swap2 {
+    left: 47%;
+    transform: scale(0.85);
+    pointer-events: auto;
+    z-index: 1;
+  }
+  .works .swap3 {
+    left: 0;
+    transform: scale(0.85);
+    pointer-events: auto;
+    z-index: 1;
+  }
+  .works .swap4 {
+    left: 0;
+    transform: scale(1);
+    pointer-events: none;
+    z-index: 0;
   }
   .works .work-item__links {
     pointer-events: visible;

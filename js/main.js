@@ -27,28 +27,18 @@ const slider = () => {
 		}
 	})
 }
+
 const swaper = () => {
 	if (justYou.style.left == 0 || justYou.style.left == '0px') {
-		justYou.style.left = '-47%'
-		justYou.style.transform = 'scale(1)'
-		justYou.style.pointerEvents = 'none'
-		justYou.style.zIndex= 0
 
-		italianPizza.style.left = '47%'
-		italianPizza.style.transform = 'scale(0.85)'
-		italianPizza.style.pointerEvents = 'auto'
-		italianPizza.style.zIndex= 1
+		justYou.classList.toggle('swap1')
+
+		italianPizza.classList.toggle('swap2')
 
 	} else {
-		justYou.style.left = 0
-		justYou.style.transform = 'scale(0.85)'
-		justYou.style.pointerEvents = 'auto'
-		justYou.style.zIndex= 1
+		justYou.classList.toggle('swap3')
 
-		italianPizza.style.left = 0
-		italianPizza.style.transform = 'scale(1)'
-		italianPizza.style.pointerEvents = 'none'
-		italianPizza.style.zIndex= 0
+		italianPizza.classList.toggle('swap4')
 	}
 }
 
