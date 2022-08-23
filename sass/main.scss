@@ -288,7 +288,7 @@ section {
 	}
 	&__box {
 		@include display-flex($fd: column, $jc: space-between, $ai: center);
-		gap: 50px;
+		gap: 40px;
 	}
 	&__links {
 		@include display-flex($ai: center);
@@ -351,7 +351,7 @@ section {
 
 @media (min-width: 1200px) {
 	.works {
-		padding-top: 9em;
+		padding-top: 7em;
 		&__box {
 			position: relative;
 		}

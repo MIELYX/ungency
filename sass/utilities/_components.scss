@@ -30,6 +30,9 @@
 	&__reverse {
 		padding: 0.5em 1em;
 		border-radius: 10px;
+		&--send{
+			padding: 5px 16px;
+		}
 	}
 	&__front {
 		position: absolute;
