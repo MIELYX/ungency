@@ -117,7 +117,7 @@
                 </div>
             </div>
         </section>
-        <section class="works">
+        <section id="works" class="works">
             <div class="container">
                 <div class="works__box">
                     <div class="works__textbox text-width text-width-works">
@@ -127,7 +127,7 @@
                             prepare an example for your business!</p>
                     </div>
                     <div class="works__items">
-                        <div class="works__item work-item works__italianpizza show swap"><img class="work-item__img"
+                        <div class="works__item work-item works__italianpizza show"><img class="work-item__img"
                                 src="./img/italianpizza.png" alt="">
                             <div class="work-item__content">
                                 <div class="work-item__textbox">
@@ -249,21 +249,27 @@
                             <h4 class="title title-h4">Got an interesting idea?</h4>
 
                             <form action="">
-                                <label class="text" for="name">Name and Surname</label>
+                                <label class="text label" for="name">Name and Surname</label>
                                 <input class="text" type="text" id="name" placeholder="Jim Brown">
 
-                                <label class="text" for="mail">Email</label>
+                                <label class="text label" for="mail">Email</label>
                                 <input class="text" type="email" id="mail" placeholder="name@example.com">
 
-                                <label class="text" for="message">Message</label>
+                                <label class="text label" for="message">Message</label>
                                 <textarea class="text" id="message" cols="30" rows="10"
                                     placeholder="A brief project description"></textarea>
-                                <div class="contact__checkbox"> <input id="privacy" type="checkbox">
-                                    <label class="text text-small" for="privacy">I have read and agree to the <a
-                                            class="text text-small text--700" href="">privacy policy</a></label>
-                                </div>
+                                    <label class="contact__checkbox">
+                                        <input type="checkbox"/>
+                                        <div></div>
+                                        <p class="text text-small">I have read and agree to the <a
+                                                class="text text-small text-700" href="">privacy policy</a></p>
+                                    </label>
+                                <button type="submit" class="btn contact__btn">
+                                    <div class="btn__front"><span class="text text-other">Submit</span></div>
+                                    <div class="btn__reverse"><span class="text text-other text-gradient">Submit</span>
+                                    </div>
+                                </button>
                             </form>
-
                         </div>
                     </div>
                 </div>

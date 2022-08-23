@@ -98,21 +98,6 @@ section {
 	}
 }
 
-// Team
-
-.team {
-	&__box {
-		@include display-flex($fd: column, $ai: center);
-	}
-	&__profiles {
-		@include display-flex($fd: row, $jc: space-around, $ai: center);
-		flex-wrap: wrap;
-		padding-top: 14rem;
-		width: 100%;
-		gap: 50px;
-	}
-}
-
 // Works
 
 .works {
@@ -148,6 +133,21 @@ section {
 	}
 }
 
+// Team
+
+.team {
+	&__box {
+		@include display-flex($fd: column, $ai: center);
+	}
+	&__profiles {
+		@include display-flex($fd: row, $jc: space-around, $ai: center);
+		flex-wrap: wrap;
+		padding-top: 14rem;
+		width: 100%;
+		gap: 50px;
+	}
+}
+
 // Contact
 
 .contact {
@@ -173,7 +173,8 @@ section {
 	}
 	&__content {
 		display: grid;
-		justify-content: start;
+		justify-content: flex-start;
+		grid-template-columns: 1fr;
 		gap: 80px;
 		padding-top: 19rem;
 		width: 100%;
@@ -193,11 +194,10 @@ section {
 	}
 	&__form {
 		width: 100%;
-		max-width: 380px;
 		.title {
 			margin-bottom: 30px;
 		}
-		label {
+		.label {
 			display: block;
 			padding-bottom: 10px;
 		}
@@ -229,14 +229,41 @@ section {
 		}
 	}
 	&__checkbox {
-		input,
-		label {
-			padding: 0;
-			margin: 0;
-		}
 		@include display-flex($jc: center, $ai: center);
 		gap: 15px;
 		padding: 20px 0;
+		input {
+			padding: 0;
+			margin: 0;
+		}
+		div {
+			width: 16px;
+			height: 16px;
+			background-color: $secondary-color;
+			border-radius: 2px;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			cursor: pointer;
+			align-items: center;
+			border: 1px solid $teritary-color;
+		}
+		input[type='checkbox'] {
+			display: none;
+		}
+		input[type='checkbox']:checked ~ div::after {
+			content: '';
+			width: 13px;
+			height: 6px;
+			margin-top: -3px;
+			border-left: 3px solid #eaeaff;
+			border-bottom: 3px solid #eaeaff;
+			transform: rotate(-45deg);
+		}
+	}
+	&__btn {
+		display: block;
+		margin: 0 auto;
 	}
 }
 
@@ -287,6 +314,9 @@ section {
 	}
 	.contact {
 		&__content {
+			max-width: 1000px;
+			grid-template-columns: auto minmax(0, 380px);
+			justify-content: space-between;
 		}
 	}
 }
@@ -301,13 +331,6 @@ section {
 			flex-direction: row;
 		}
 	}
-	.contact {
-		&__content {
-			grid-template-columns: auto minmax(0, 380px);
-			justify-content: center;
-			gap: 50px;
-		}
-	}
 }
 
 @media (min-width: 1200px) {
@@ -320,10 +343,10 @@ section {
 			padding: 0;
 		}
 		&__item {
-			order: 1;
+			position: relative;
+			left: 0px;
 			opacity: 1;
-			transform: scale(0.85);
-			transition: order 1s, transform 1s;
+			transition: left 0.8s, transform 0.8s;
 			pointer-events: auto;
 		}
 		&__textbox {
@@ -333,13 +356,14 @@ section {
 		&__togglers {
 			display: none;
 		}
-		.show {
-			position: static;
-		}
-		.swap {
-			order: 0;
-			transform: scale(1);
+		&__italianpizza {
 			pointer-events: none;
+		}
+		&__justyou {
+			transform: scale(0.85);
+		}
+		.show {
+			position: relative;
 		}
 		.work-item {
 			&__links {

@@ -9,7 +9,7 @@
 html {
   font-size: 10px;
   scroll-behavior: smooth;
-  scroll-padding: 10em;
+  scroll-padding: 8em;
 }
 
 a {
@@ -470,23 +470,6 @@ section {
   padding-top: 14rem;
 }
 
-.team__box {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-.team__profiles {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  padding-top: 14rem;
-  width: 100%;
-  gap: 50px;
-}
-
 .works {
   overflow: hidden;
 }
@@ -525,6 +508,23 @@ section {
   pointer-events: auto;
 }
 
+.team__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.team__profiles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 14rem;
+  width: 100%;
+  gap: 50px;
+}
+
 .contact__items {
   display: flex;
   flex-direction: column;
@@ -555,7 +555,8 @@ section {
 }
 .contact__content {
   display: grid;
-  justify-content: start;
+  justify-content: flex-start;
+  grid-template-columns: 1fr;
   gap: 80px;
   padding-top: 19rem;
   width: 100%;
@@ -577,12 +578,11 @@ section {
 }
 .contact__form {
   width: 100%;
-  max-width: 380px;
 }
 .contact__form .title {
   margin-bottom: 30px;
 }
-.contact__form label {
+.contact__form .label {
   display: block;
   padding-bottom: 10px;
 }
@@ -630,10 +630,37 @@ section {
   gap: 15px;
   padding: 20px 0;
 }
-.contact__checkbox input,
-.contact__checkbox label {
+.contact__checkbox input {
   padding: 0;
   margin: 0;
+}
+.contact__checkbox div {
+  width: 16px;
+  height: 16px;
+  background-color: #3f306b;
+  border-radius: 2px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  border: 1px solid #241256;
+}
+.contact__checkbox input[type=checkbox] {
+  display: none;
+}
+.contact__checkbox input[type=checkbox]:checked ~ div::after {
+  content: "";
+  width: 13px;
+  height: 6px;
+  margin-top: -3px;
+  border-left: 3px solid #eaeaff;
+  border-bottom: 3px solid #eaeaff;
+  transform: rotate(-45deg);
+}
+.contact__btn {
+  display: block;
+  margin: 0 auto;
 }
 
 .fotter {
@@ -684,6 +711,11 @@ section {
     margin-left: 2em;
     margin-top: 0;
   }
+  .contact__content {
+    max-width: 1000px;
+    grid-template-columns: auto minmax(0, 380px);
+    justify-content: space-between;
+  }
 }
 @media (min-width: 992px) {
   .hero {
@@ -695,11 +727,6 @@ section {
   .fotter__box {
     flex-direction: row;
   }
-  .contact__content {
-    grid-template-columns: auto minmax(0, 380px);
-    justify-content: center;
-    gap: 50px;
-  }
 }
 @media (min-width: 1200px) {
   .works__box {
@@ -710,10 +737,10 @@ section {
     padding: 0;
   }
   .works__item {
-    order: 1;
+    position: relative;
+    left: 0px;
     opacity: 1;
-    transform: scale(0.85);
-    transition: order 1s, transform 1s;
+    transition: left 0.8s, transform 0.8s;
     pointer-events: auto;
   }
   .works__textbox {
@@ -723,13 +750,14 @@ section {
   .works__togglers {
     display: none;
   }
-  .works .show {
-    position: static;
-  }
-  .works .swap {
-    order: 0;
-    transform: scale(1);
+  .works__italianpizza {
     pointer-events: none;
+  }
+  .works__justyou {
+    transform: scale(0.85);
+  }
+  .works .show {
+    position: relative;
   }
   .works .work-item__links {
     pointer-events: visible;
