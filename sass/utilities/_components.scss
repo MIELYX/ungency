@@ -30,8 +30,8 @@
 	&__reverse {
 		padding: 0.5em 1em;
 		border-radius: 10px;
-		&--send{
-			padding: 5px 16px;
+		&--send {
+			padding: 5px 20px;
 		}
 	}
 	&__front {
@@ -61,6 +61,9 @@
 	width: 100%;
 	max-width: 380px;
 	z-index: 0;
+	.title {
+		padding-bottom: 15px;
+	}
 	&__bg,
 	&__body {
 		border-radius: 20px;
@@ -175,6 +178,78 @@
 	}
 }
 
+.inputbox {
+	position: relative;
+	&__border {
+		position: absolute;
+		top: -2px;
+		left: -2px;
+		right: -2px;
+		bottom: -2px;
+		border-radius: 10px;
+		background-color: $teritary-color;
+		&--textarea {
+			bottom: 2px;
+		}
+	}
+	&__input,
+	&__textarea {
+		position: relative;
+		padding: 12px 14px;
+		width: 100%;
+		border: none;
+		border-radius: 10px;
+		background-color: $secondary-color;
+		z-index: 1;
+		&::placeholder {
+			color: $placeholder-color;
+		}
+	}
+	&__textarea {
+		height: 120px;
+	}
+	&__input:focus,
+	&__textarea:focus {
+		outline: 0;
+	}
+	&__input:focus ~ &__border,
+	&__textarea:focus ~ &__border {
+		background-color: transparent;
+		background-image: $primary-outline-gradient;
+	}
+}
+
+.checkbox {
+	@include display-flex($jc: center, $ai: center);
+	gap: 15px;
+	margin: 20px 0;
+	&__input {
+		padding: 0;
+		margin: 0;
+	}
+	&__div {
+		@include display-flex($jc: center, $ai: center);
+		width: 16px;
+		height: 16px;
+		border: 1px solid $teritary-color;
+		border-radius: 2px;
+		background-color: $secondary-color;
+		cursor: pointer;
+	}
+	&__input[type='checkbox'] {
+		display: none;
+	}
+	&__input[type='checkbox']:checked ~ &__div::after {
+		content: '';
+		margin-top: -3px;
+		border-left: 3px solid #eaeaff;
+		border-bottom: 3px solid #eaeaff;
+		width: 13px;
+		height: 6px;
+		transform: rotate(-45deg);
+	}
+}
+
 @media (min-width: 425px) {
 	.work-item {
 		&__content {
@@ -207,5 +282,14 @@
 		&__body {
 			padding: 15% 10%;
 		}
+	}
+}
+
+@keyframes move {
+	50%{
+		transform: translateY(-10%);
+	}
+	100%{
+		transform: translateY(0%);
 	}
 }

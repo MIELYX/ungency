@@ -9,7 +9,6 @@
 html {
   font-size: 10px;
   scroll-behavior: smooth;
-  scroll-padding: 8.5em;
 }
 
 a {
@@ -53,6 +52,10 @@ table {
 .title-h3 {
   font-size: 3.2rem;
   line-height: 48px;
+}
+.title-h3-card {
+  font-size: 2.4rem;
+  line-height: 28px;
 }
 .title-h4 {
   font-size: 2.4rem;
@@ -180,7 +183,7 @@ table {
   border-radius: 10px;
 }
 .btn__front--send, .btn__reverse--send {
-  padding: 5px 16px;
+  padding: 5px 20px;
 }
 .btn__front {
   position: absolute;
@@ -209,6 +212,9 @@ table {
   width: 100%;
   max-width: 380px;
   z-index: 0;
+}
+.card .title {
+  padding-bottom: 15px;
 }
 .card__bg, .card__body {
   border-radius: 20px;
@@ -346,6 +352,87 @@ table {
   transform: scale(1.25);
 }
 
+.inputbox {
+  position: relative;
+}
+.inputbox__border {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 10px;
+  background-color: #241256;
+}
+.inputbox__border--textarea {
+  bottom: 2px;
+}
+.inputbox__input, .inputbox__textarea {
+  position: relative;
+  padding: 12px 14px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background-color: #3f306b;
+  z-index: 1;
+}
+.inputbox__input::-moz-placeholder, .inputbox__textarea::-moz-placeholder {
+  color: #acb5bd;
+}
+.inputbox__input:-ms-input-placeholder, .inputbox__textarea:-ms-input-placeholder {
+  color: #acb5bd;
+}
+.inputbox__input::placeholder, .inputbox__textarea::placeholder {
+  color: #acb5bd;
+}
+.inputbox__textarea {
+  height: 120px;
+}
+.inputbox__input:focus, .inputbox__textarea:focus {
+  outline: 0;
+}
+.inputbox__input:focus ~ .inputbox__border, .inputbox__textarea:focus ~ .inputbox__border {
+  background-color: transparent;
+  background-image: linear-gradient(200deg, #d4088c 14.65%, #cb078b 17.48%, #85068a 47.18%, #580689 68.39%, #480689 79%);
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+.checkbox__input {
+  padding: 0;
+  margin: 0;
+}
+.checkbox__div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #241256;
+  border-radius: 2px;
+  background-color: #3f306b;
+  cursor: pointer;
+}
+.checkbox__input[type=checkbox] {
+  display: none;
+}
+.checkbox__input[type=checkbox]:checked ~ .checkbox__div::after {
+  content: "";
+  margin-top: -3px;
+  border-left: 3px solid #eaeaff;
+  border-bottom: 3px solid #eaeaff;
+  width: 13px;
+  height: 6px;
+  transform: rotate(-45deg);
+}
+
 @media (min-width: 425px) {
   .work-item__content {
     padding: 7% 5%;
@@ -371,6 +458,146 @@ table {
     padding: 15% 10%;
   }
 }
+@-webkit-keyframes move {
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes move {
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+.circlebox {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: -1;
+}
+.circlebox-1 {
+  width: 70.2px;
+  height: 142.17px;
+  top: 85%;
+  left: -30%;
+}
+.circlebox-2 {
+  width: 70.67px;
+  height: 137.11px;
+  top: 55%;
+  right: -40%;
+}
+.circlebox-3 {
+  width: 70.2px;
+  height: 142.17px;
+  top: 63%;
+  left: 50%;
+}
+.circlebox-4 {
+  width: 70.67px;
+  height: 137.11px;
+  top: 40%;
+  right: 5%;
+}
+.circlebox__element {
+  position: relative;
+  top: 0;
+}
+.circlebox__element-1, .circlebox__element-3 {
+  -webkit-animation: move2 6s infinite;
+          animation: move2 6s infinite;
+}
+.circlebox__element-2, .circlebox__element-4 {
+  -webkit-animation: move3 8s infinite;
+          animation: move3 8s infinite;
+}
+
+.el {
+  position: absolute;
+  top: 14%;
+  z-index: -1;
+}
+.el-1 {
+  left: 4%;
+}
+.el-2 {
+  left: 30%;
+}
+.el-3 {
+  left: 55%;
+}
+.el-4 {
+  left: 70%;
+}
+.el-5 {
+  left: 88%;
+}
+.el-6 {
+  left: -3%;
+  top: 24%;
+}
+.el-7 {
+  left: 58%;
+  top: 18%;
+}
+.el-8 {
+  left: 43%;
+  top: 70%;
+}
+.el-9 {
+  right: -5%;
+  top: 45%;
+}
+
+@-webkit-keyframes move2 {
+  50% {
+    top: 30%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes move2 {
+  50% {
+    top: 30%;
+  }
+  100% {
+    top: 0;
+  }
+}
+@-webkit-keyframes move3 {
+  50% {
+    top: 45%;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes move3 {
+  50% {
+    top: 45%;
+  }
+  100% {
+    top: 0;
+  }
+}
+@media (max-width: 576px) {
+  .el-2, .el-4 {
+    display: none;
+  }
+  .el-7 {
+    left: 60%;
+    top: 40%;
+  }
+}
 :root {
   background-color: #1c0b4e;
 }
@@ -380,8 +607,13 @@ body {
   color: #fff;
 }
 
-section {
-  padding-bottom: 25em;
+.hero,
+.about,
+.team,
+.works,
+.contact {
+  padding-top: 10rem;
+  padding-bottom: 20rem;
 }
 
 .nav {
@@ -448,19 +680,43 @@ section {
 }
 
 .hero {
-  padding-top: 8em;
+  position: relative;
+  padding-top: 13rem;
+}
+.hero__box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero__textbox {
+  position: relative;
 }
 .hero__text {
   padding: 1.5em 0 5em;
 }
-.hero__img {
-  height: 379;
-  width: 418px;
+.hero__imgbox {
+  position: relative;
+  display: none;
+}
+.hero__imgbox-under {
+  position: absolute;
+  left: 66px;
+  top: 160.24px;
+}
+.hero__imgbox-over {
+  position: absolute;
+  left: 78.41px;
+  top: 37px;
+  transform: translate(0);
+  filter: drop-shadow(0px 0px 25px rgba(167, 6, 138, 0.8));
+  -webkit-animation: move 8s infinite;
+          animation: move 8s infinite;
+}
+.hero .circlebox-3, .hero .circlebox-4 {
+  display: none;
 }
 
-.about h3 {
-  font-size: 2.4rem;
-}
 .about__box {
   display: flex;
   flex-direction: column;
@@ -532,6 +788,9 @@ section {
   gap: 50px;
 }
 
+.contact {
+  padding-bottom: 13rem;
+}
 .contact__items {
   display: flex;
   flex-direction: column;
@@ -592,86 +851,17 @@ section {
 .contact__form {
   width: 100%;
 }
-.contact__form .title {
+.contact__form-title {
   margin-bottom: 30px;
 }
-.contact__form .label {
+.contact__form-label {
   display: block;
   padding-bottom: 10px;
 }
-.contact__form input,
-.contact__form textarea {
-  width: 100%;
-  padding: 14px;
-  border-radius: 10px;
-  background-color: #3f306b;
-  border: 2px solid #241256;
-}
-.contact__form input:focus,
-.contact__form textarea:focus {
-  outline: none;
-}
-.contact__form input::-moz-placeholder, .contact__form textarea::-moz-placeholder {
-  font-size: 1.6rem;
-  color: #acb5bd;
-}
-.contact__form input:-ms-input-placeholder, .contact__form textarea:-ms-input-placeholder {
-  font-size: 1.6rem;
-  color: #acb5bd;
-}
-.contact__form input::placeholder,
-.contact__form textarea::placeholder {
-  font-size: 1.6rem;
-  color: #acb5bd;
-}
-.contact__form input {
-  height: 4.8rem;
+.contact__form-inputbox {
   margin-bottom: 20px;
 }
-.contact__form input[type=checkbox] {
-  width: 16px;
-  height: 16px;
-}
-.contact__form textarea {
-  height: 120px;
-}
-.contact__checkbox {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  padding: 20px 0;
-}
-.contact__checkbox input {
-  padding: 0;
-  margin: 0;
-}
-.contact__checkbox div {
-  width: 16px;
-  height: 16px;
-  background-color: #3f306b;
-  border-radius: 2px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-  align-items: center;
-  border: 1px solid #241256;
-}
-.contact__checkbox input[type=checkbox] {
-  display: none;
-}
-.contact__checkbox input[type=checkbox]:checked ~ div::after {
-  content: "";
-  width: 13px;
-  height: 6px;
-  margin-top: -3px;
-  border-left: 3px solid #eaeaff;
-  border-bottom: 3px solid #eaeaff;
-  transform: rotate(-45deg);
-}
-.contact__btn {
+.contact__form-btn {
   display: block;
   margin: 0 auto;
 }
@@ -706,10 +896,16 @@ section {
 
 @media (min-width: 576px) {
   .hero {
-    padding-top: 12em;
+    padding-top: 20rem;
+  }
+  .contact {
+    padding-bottom: 20rem;
   }
 }
 @media (min-width: 768px) {
+  .hero .circlebox-3, .hero .circlebox-4 {
+    display: block;
+  }
   .sticky-body {
     overflow: visible;
   }
@@ -738,7 +934,10 @@ section {
 }
 @media (min-width: 992px) {
   .hero {
-    padding-top: 16em;
+    padding-top: 25rem;
+  }
+  .contact {
+    padding-bottom: 25rem;
   }
   .fotter {
     padding: 14px 0;
@@ -748,10 +947,24 @@ section {
   }
 }
 @media (min-width: 1200px) {
+  .hero .circlebox-3, .hero .circlebox-4 {
+    display: none;
+  }
+  .hero__imgbox {
+    display: block;
+    width: 417.9px;
+    height: 378.92px;
+    top: -20px;
+    left: -80px;
+  }
+  .about {
+    padding-bottom: 10em;
+  }
   .works {
-    padding-top: 7em;
+    padding-top: 0;
   }
   .works__box {
+    padding-top: 20rem;
     position: relative;
   }
   .works__items {
@@ -767,7 +980,7 @@ section {
   }
   .works__textbox {
     position: absolute;
-    top: 20%;
+    top: 45%;
   }
   .works__togglers {
     display: none;

@@ -62,11 +62,35 @@
                             <div class="btn__reverse"><span class="text text-other text-gradient">Request a quote</span>
                             </div>
                         </a>
+                        <img src="./img/el6.svg" alt="" class="el el-6">
+                        <img src="./img/el7.svg" alt="" class="el el-7">
+                        <img src="./img/el8.svg" alt="" class="el el-8">
+                        <img src="./img/el9.svg" alt="" class="el el-9">
                     </div>
                     <div class="hero__imgbox">
-                        <div class="img">
-
+                        <img class="hero__imgbox-under" src="./img/element-under.svg" alt="">
+                        <img class="hero__imgbox-over" src="./img/element-over.svg" alt="">
+                        <div class="circlebox circlebox-1">
+                            <img class="circlebox__element circlebox__element-1" src="./img/circle1.svg" alt="">
+                            <img src="./img/circle1-under.svg" alt="">
                         </div>
+                        <div class="circlebox circlebox-2">
+                            <img class="circlebox__element circlebox__element-2" src="./img/circle2.svg" alt="">
+                            <img src="./img/circle2-under.svg" alt="">
+                        </div>
+                    </div>
+                    <img src="./img/el1.svg" alt="" class="el el-1">
+                    <img src="./img/el2.svg" alt="" class="el el-2">
+                    <img src="./img/el3.svg" alt="" class="el el-3">
+                    <img src="./img/el4.svg" alt="" class="el el-4">
+                    <img src="./img/el5.svg" alt="" class="el el-5">
+                    <div class="circlebox circlebox-3">
+                        <img class="circlebox__element circlebox__element-1" src="./img/circle1.svg" alt="">
+                        <img src="./img/circle1-under.svg" alt="">
+                    </div>
+                    <div class="circlebox circlebox-4">
+                        <img class="circlebox__element circlebox__element-4" src="./img/circle2.svg" alt="">
+                        <img src="./img/circle2-under.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -86,7 +110,7 @@
                                 <img src="./img/magnifier-small.svg" alt="" class="card__img card__img--small">
                                 <img src="./img/magnifier-medium.svg" alt="" class="card__img card__img--medium">
                                 <div class="text-width-card">
-                                    <h3 class="title title-h3">UX Research</h3>
+                                    <h3 class="title title-h3 title-h3-card">UX Research</h3>
                                     <p class="text">This stage is responsible for researching business
                                         needs and discovering the project's target audience.</p>
                                 </div>
@@ -100,7 +124,7 @@
                                 <img src="./img/smartphone-medium.svg" alt=""
                                     class="card__img card__img--medium card__img--middle">
                                 <div class="text-width-card">
-                                    <h3 class="title title-h3">User Interface</h3>
+                                    <h3 class="title title-h3 title-h3-card">User Interface</h3>
                                     <p class="text">Here we build an interactive interface design that
                                         consists of style guides and all the data we analyzed earlier.</p>
                                 </div>
@@ -112,7 +136,7 @@
                                 <img src="./img/smartphone2-small.svg" alt="" class="card__img card__img--small">
                                 <img src="./img/smartphone2-medium.svg" alt="" class="card__img card__img--medium">
                                 <div class="text-width-card">
-                                    <h3 class="title title-h3">Web Development</h3>
+                                    <h3 class="title title-h3 title-h3-card">Web Development</h3>
                                     <p class="text">This is the final straightforward in creating a
                                         finished project for you, it is simply turning a project into a truly
                                         prosperous site.</p>
@@ -252,29 +276,46 @@
                             </div>
                         </div>
                         <div class="contact__form">
-                            <h4 class="title title-h4">Got an interesting idea?</h4>
+                            <h4 class="title title-h4 contact__form-title">Got an interesting idea?</h4>
 
                             <form action="">
-                                <label class="text label" for="name">Name and Surname</label>
-                                <input class="text" type="text" id="name" placeholder="Jim Brown">
 
-                                <label class="text label" for="mail">Email</label>
-                                <input class="text" type="email" id="mail" placeholder="name@example.com">
+                                <label class="text contact__form-label" for="name">Name and Surname</label>
+                                <div class="inputbox contact__form-inputbox">
+                                    <input id="name" class="text inputbox__input" type="text" placeholder="Jim Brown">
+                                    <div class="inputbox__border"></div>
+                                </div>
 
-                                <label class="text label" for="message">Message</label>
-                                <textarea class="text" id="message" cols="30" rows="10"
-                                    placeholder="A brief project description"></textarea>
-                                <label class="contact__checkbox">
-                                    <input type="checkbox" />
-                                    <div></div>
+                                <label class="text contact__form-label" for="mail">Email</label>
+                                <div class="inputbox contact__form-inputbox">
+                                    <input id="mail" class="text inputbox__input" type="text"
+                                        placeholder="name@example.com">
+                                    <div class="inputbox__border"></div>
+                                </div>
+
+
+                                <label class="text contact__form-label" for="message">Message</label>
+                                <div class="inputbox contact__form-inputbox">
+                                    <textarea id="message" class="text inputbox__textarea" cols="30" rows="10"
+                                        placeholder="A brief project description"></textarea>
+                                    <div class="inputbox__border inputbox__border--textarea"></div>
+                                </div>
+
+                                <label class="checkbox">
+                                    <input class="checkbox__input" type="checkbox" />
+                                    <div class="checkbox__div"></div>
                                     <p class="text text-small">I have read and agree to the <a
                                             class="text text-small text-700" href="">privacy policy</a></p>
                                 </label>
-                                <button type="submit" class="btn contact__btn">
-                                    <div class="btn__front btn__front--send"><span class="text text-other">Send</span></div>
-                                    <div class="btn__reverse btn__reverse--send"><span class="text text-other text-gradient">Send</span>
+
+                                <button type="submit" class="btn contact__form-btn">
+                                    <div class="btn__front btn__front--send"><span class="text text-other">Send</span>
+                                    </div>
+                                    <div class="btn__reverse btn__reverse--send"><span
+                                            class="text text-other text-gradient">Send</span>
                                     </div>
                                 </button>
+
                             </form>
                         </div>
                     </div>

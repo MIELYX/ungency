@@ -9,8 +9,13 @@ body {
 	color: $text-color;
 }
 
-section {
-	padding-bottom: 25em;
+.hero,
+.about,
+.team,
+.works,
+.contact {
+	padding-top: 10rem;
+	padding-bottom: 20rem;
 }
 
 // Nav
@@ -71,23 +76,44 @@ section {
 // Hero
 
 .hero {
-	padding-top: 8em;
+	position: relative;
+	padding-top: 13rem;
+	&__box {
+		@include display-flex($jc: space-between, $ai: center);
+	}
+	&__textbox {
+		position: relative;
+	}
 	&__text {
 		padding: 1.5em 0 5em;
 	}
-	&__img {
-		height: 379;
-		width: 418px;
+	&__imgbox {
+		position: relative;
+		display: none;
+		&-under {
+			position: absolute;
+			left: 66px;
+			top: 160.24px;
+		}
+		&-over {
+			position: absolute;
+			left: 78.41px;
+			top: 37px;
+			transform: translate(0);
+			filter: $laptop-shadow;
+			animation: move 8s infinite;
+		}
+	}
+	.circlebox{
+		&-3, &-4{
+			display: none;
+		}
 	}
 }
 
 // About
 
 .about {
-	// Card title
-	h3 {
-		font-size: 2.4rem;
-	}
 	&__box {
 		@include display-flex($fd: column, $ai: center);
 	}
@@ -155,6 +181,7 @@ section {
 // Contact
 
 .contact {
+	padding-bottom: 13rem;
 	&__items {
 		@include display-flex($fd: column);
 		gap: 80px;
@@ -194,7 +221,7 @@ section {
 		padding-left: 10px;
 		&--links {
 			gap: 20px;
-			a{
+			a {
 				transition: transform 0.3s;
 			}
 			a:hover {
@@ -204,76 +231,20 @@ section {
 	}
 	&__form {
 		width: 100%;
-		.title {
+		&-title {
 			margin-bottom: 30px;
 		}
-		.label {
+		&-label {
 			display: block;
 			padding-bottom: 10px;
 		}
-		input,
-		textarea {
-			width: 100%;
-			padding: 14px;
-			border-radius: 10px;
-			background-color: $secondary-color;
-			border: 2px solid $teritary-color;
-			&:focus {
-				outline: none;
-			}
-			&::placeholder {
-				font-size: 1.6rem;
-				color: $placeholder-color;
-			}
-		}
-		input {
-			height: 4.8rem;
+		&-inputbox {
 			margin-bottom: 20px;
 		}
-		input[type='checkbox'] {
-			width: 16px;
-			height: 16px;
+		&-btn {
+			display: block;
+			margin: 0 auto;
 		}
-		textarea {
-			height: 120px;
-		}
-	}
-	&__checkbox {
-		@include display-flex($jc: center, $ai: center);
-		gap: 15px;
-		padding: 20px 0;
-		input {
-			padding: 0;
-			margin: 0;
-		}
-		div {
-			width: 16px;
-			height: 16px;
-			background-color: $secondary-color;
-			border-radius: 2px;
-			position: relative;
-			display: flex;
-			justify-content: center;
-			cursor: pointer;
-			align-items: center;
-			border: 1px solid $teritary-color;
-		}
-		input[type='checkbox'] {
-			display: none;
-		}
-		input[type='checkbox']:checked ~ div::after {
-			content: '';
-			width: 13px;
-			height: 6px;
-			margin-top: -3px;
-			border-left: 3px solid #eaeaff;
-			border-bottom: 3px solid #eaeaff;
-			transform: rotate(-45deg);
-		}
-	}
-	&__btn {
-		display: block;
-		margin: 0 auto;
 	}
 }
 
@@ -292,7 +263,7 @@ section {
 	}
 	&__links {
 		@include display-flex($ai: center);
-		a{
+		a {
 			transition: transform 0.3s;
 		}
 		a:hover {
@@ -303,11 +274,21 @@ section {
 
 @media (min-width: 576px) {
 	.hero {
-		padding-top: 12em;
+		padding-top: 20rem;
+	}
+	.contact {
+		padding-bottom: 20rem;
 	}
 }
 
 @media (min-width: 768px) {
+	.hero{
+		.circlebox{
+			&-3, &-4{
+				display: block;
+			}
+		}
+	}
 	.sticky-body {
 		overflow: visible;
 	}
@@ -339,7 +320,10 @@ section {
 
 @media (min-width: 992px) {
 	.hero {
-		padding-top: 16em;
+		padding-top: 25rem;
+	}
+	.contact {
+		padding-bottom: 25rem;
 	}
 	.fotter {
 		padding: 14px 0;
@@ -350,9 +334,27 @@ section {
 }
 
 @media (min-width: 1200px) {
+	.hero {
+		.circlebox{
+			&-3, &-4{
+				display: none;
+			}
+		}
+		&__imgbox {
+			display: block;
+			width: 417.9px;
+			height: 378.92px;
+			top: -20px;
+			left: -80px;
+		}
+	}
+	.about {
+		padding-bottom: 10em;
+	}
 	.works {
-		padding-top: 7em;
+		padding-top: 0;
 		&__box {
+			padding-top: 20rem;
 			position: relative;
 		}
 		&__items {
@@ -368,7 +370,7 @@ section {
 		}
 		&__textbox {
 			position: absolute;
-			top: 20%;
+			top: 45%;
 		}
 		&__togglers {
 			display: none;
