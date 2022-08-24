@@ -736,6 +736,7 @@ body {
 .team,
 .works,
 .contact {
+  overflow: hidden;
   padding-top: 10rem;
   padding-bottom: 20rem;
 }
