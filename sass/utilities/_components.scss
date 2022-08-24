@@ -204,6 +204,11 @@
 		&::placeholder {
 			color: $placeholder-color;
 		}
+		&:autofill,
+		&:-webkit-autofill {
+			-webkit-box-shadow: 0 0 0 100px $secondary-color inset; /* Change the color to your own background color */
+			-webkit-text-fill-color: #fff;
+		}
 	}
 	&__textarea {
 		height: 120px;
@@ -286,10 +291,10 @@
 }
 
 @keyframes move {
-	50%{
+	50% {
 		transform: translateY(-10%);
 	}
-	100%{
+	100% {
 		transform: translateY(0%);
 	}
 }

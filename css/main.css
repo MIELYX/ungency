@@ -386,6 +386,14 @@ table {
 .inputbox__input::placeholder, .inputbox__textarea::placeholder {
   color: #acb5bd;
 }
+.inputbox__input:-webkit-autofill, .inputbox__textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px #3f306b inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: #fff;
+}
+.inputbox__input:autofill, .inputbox__input:-webkit-autofill, .inputbox__textarea:autofill, .inputbox__textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px #3f306b inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: #fff;
+}
 .inputbox__textarea {
   height: 120px;
 }
@@ -526,7 +534,7 @@ table {
   z-index: -1;
 }
 .el-1 {
-  top: 30%;
+  top: 25%;
   left: 4%;
 }
 .el-2 {
@@ -558,8 +566,108 @@ table {
   top: 45%;
 }
 .el-10 {
-  left: -30%;
-  top: -130%;
+  left: -70%;
+  top: -160%;
+}
+.el-11 {
+  left: 30%;
+  top: -60%;
+}
+.el-12 {
+  left: 100%;
+  top: -90%;
+}
+.el-13 {
+  right: -105%;
+  top: -120%;
+}
+.el-14 {
+  left: -50%;
+  top: 50%;
+}
+.el-15 {
+  right: -70%;
+  top: 55%;
+}
+.el-16 {
+  left: 16%;
+  top: 93%;
+}
+.el-17 {
+  left: 55%;
+  top: 103%;
+}
+.el-18 {
+  left: 35%;
+  top: 113%;
+}
+.el-19 {
+  left: 90%;
+  top: 112%;
+}
+.el-20 {
+  left: 20%;
+  top: 85%;
+}
+.el-21 {
+  left: 40%;
+  top: 60%;
+}
+.el-22 {
+  left: 80%;
+  top: 97%;
+}
+.el-23 {
+  left: 55%;
+  top: 87%;
+}
+.el-24 {
+  left: 80%;
+  top: 20%;
+}
+.el-25 {
+  left: 40%;
+  top: 30%;
+}
+.el-26 {
+  left: 90%;
+  top: 70%;
+}
+.el-27 {
+  left: 15%;
+  top: 72%;
+}
+.el-28 {
+  left: 80%;
+  top: 20%;
+}
+.el-29 {
+  left: 20%;
+  top: 80%;
+}
+.el-30 {
+  left: 80%;
+  top: 20%;
+}
+.el-31 {
+  left: 80%;
+  top: 20%;
+}
+.el-32 {
+  left: 55%;
+  top: 87%;
+}
+.el-33 {
+  left: 40%;
+  top: 60%;
+}
+.el-34 {
+  left: 50%;
+  top: 40%;
+}
+.el-35 {
+  left: 20%;
+  top: 6%;
 }
 
 @-webkit-keyframes move2 {
@@ -596,12 +704,22 @@ table {
   }
 }
 @media (max-width: 576px) {
+  .el-1 {
+    top: 12%;
+  }
   .el-2, .el-4 {
     display: none;
   }
   .el-7 {
     left: 60%;
     top: 40%;
+  }
+  .el-8 {
+    left: 43%;
+    top: 70%;
+  }
+  .el-21 {
+    top: 97%;
   }
 }
 :root {
@@ -611,11 +729,6 @@ table {
 body {
   font-size: 1.6rem;
   color: #fff;
-}
-
-a:focus {
-  outline: 2px solid #fff;
-  border-radius: 10px;
 }
 
 .hero,
@@ -728,6 +841,9 @@ a:focus {
   display: none;
 }
 
+.about {
+  position: relative;
+}
 .about__box {
   display: flex;
   flex-direction: column;
@@ -745,6 +861,7 @@ a:focus {
 }
 
 .works {
+  position: relative;
   overflow: hidden;
 }
 .works__box {
@@ -782,6 +899,9 @@ a:focus {
   pointer-events: auto;
 }
 
+.team {
+  position: relative;
+}
 .team__box {
   display: flex;
   flex-direction: column;
@@ -800,6 +920,7 @@ a:focus {
 }
 
 .contact {
+  position: relative;
   padding-bottom: 13rem;
 }
 .contact__items {

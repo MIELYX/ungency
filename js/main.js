@@ -8,6 +8,8 @@ const itemList = document.querySelectorAll('.work-item')
 const italianPizza = document.querySelector('.works__italianpizza')
 const justYou = document.querySelector('.works__justyou')
 
+
+
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear()
 	currentYear.innerText = year
