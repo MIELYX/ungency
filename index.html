@@ -284,8 +284,9 @@
                         <div class="contact__form">
                             <h4 class="title title-h4 contact__form-title">Got an interesting idea?</h4>
 
-                            <form action="https://formsubmit.io/send/kacpermielczarek@protonmail.com" method="POST">
-                                <input id="text "type="text" name="text">
+                            <!-- <form action="https://formsubmit.io/send/kacpermielczarek@protonmail.com" method="POST">
+
+
                                 <label class="text contact__form-label" for="name">Name and Surname</label>
                                 <div class="inputbox contact__form-inputbox">
                                     <input id="name" name="name" class="text inputbox__input" type="text" placeholder="Jim Brown">
@@ -322,6 +323,15 @@
                                     </div>
                                 </button>
 
+                            </form> -->
+                            <form id="contactform" action="https://formsubmit.io/send/kacpermielczarek@protonmail.com" method="POST">
+                                <input name="name" type="text" id="name">
+                                <input name="email" type="email" id="email">
+                                <textarea name="comment" id="comment" rows="3"></textarea>
+                            
+                                <input name="_formsubmit_id" type="text" style="display:none">
+                            
+                                <input value="Submit" type="submit">
                             </form>
                         </div>
                     </div>
