@@ -46,6 +46,7 @@
 	top: 14%;
     z-index: -1;
 	&-1 {
+		top: 30%;
 		left: 4%;
 	}
 	&-2 {
@@ -76,6 +77,11 @@
         right: -5%;
         top: 45%;
     }
+	&-10{
+        left: -30%;
+        top: -130%;
+    }
+
 }
 
 @keyframes move2 {
