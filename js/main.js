@@ -7,8 +7,10 @@ const btnRight = document.querySelector('.arrow-right')
 const itemList = document.querySelectorAll('.work-item')
 const italianPizza = document.querySelector('.works__italianpizza')
 const justYou = document.querySelector('.works__justyou')
-
-
+const form = document.querySelector('.form')
+const submit = document.querySelector('.contact__form-btn')
+const alert = document.querySelector('.contact__form-alert')
+const checkbox = document.querySelector('.checkbox__input')
 
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear()
@@ -32,11 +34,9 @@ const slider = () => {
 
 const swaper = () => {
 	if (justYou.style.left == 0 || justYou.style.left == '0px') {
-
 		justYou.classList.toggle('swap1')
 
 		italianPizza.classList.toggle('swap2')
-
 	} else {
 		justYou.classList.toggle('swap3')
 
@@ -44,11 +44,19 @@ const swaper = () => {
 	}
 }
 
+const alertShow = () => {
+	if (!checkbox.checked) {
+		alert.classList.remove('hidden')
+	} else {
+		alert.classList.add('hidden')
+	}
+}
+
 handleCurrentYear()
 btnLeft.addEventListener('click', slider)
 btnRight.addEventListener('click', slider)
 hamburger.addEventListener('click', slideOut)
-slideOutItems.forEach(item => item.addEventListener('click', slideOut))
-
 italianPizza.addEventListener('click', swaper)
 justYou.addEventListener('click', swaper)
+
+submit.addEventListener('click', alertShow)

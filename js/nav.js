@@ -1,0 +1,1 @@
+slideOutItems.forEach(item => item.addEventListener('click', slideOut))

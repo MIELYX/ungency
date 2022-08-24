@@ -998,6 +998,25 @@ body {
   display: block;
   margin: 0 auto;
 }
+.contact__form-alert {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 17px;
+  margin-top: 20px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  width: 100%;
+  background-color: rgba(240, 61, 62, 0.1);
+}
+.contact__form-alert .text {
+  color: #F03D3E;
+}
+
+.hidden {
+  display: none;
+}
 
 .fotter {
   padding: 3em 0;

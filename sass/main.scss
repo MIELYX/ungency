@@ -105,8 +105,9 @@ body {
 			animation: move 8s infinite;
 		}
 	}
-	.circlebox{
-		&-3, &-4{
+	.circlebox {
+		&-3,
+		&-4 {
 			display: none;
 		}
 	}
@@ -250,7 +251,23 @@ body {
 			display: block;
 			margin: 0 auto;
 		}
+		&-alert {
+			@include display-flex($ai: center);
+			gap: 17px;
+			margin-top: 20px;
+			padding: 12px 24px;
+			border-radius: 8px;
+			width: 100%;
+			background-color: $alert-body-color;
+			.text {
+				color: $alert-text-color;
+			}
+		}
 	}
+}
+
+.hidden {
+	display: none;
 }
 
 // Fotter
@@ -287,9 +304,10 @@ body {
 }
 
 @media (min-width: 768px) {
-	.hero{
-		.circlebox{
-			&-3, &-4{
+	.hero {
+		.circlebox {
+			&-3,
+			&-4 {
 				display: block;
 			}
 		}
@@ -340,8 +358,9 @@ body {
 
 @media (min-width: 1200px) {
 	.hero {
-		.circlebox{
-			&-3, &-4{
+		.circlebox {
+			&-3,
+			&-4 {
 				display: none;
 			}
 		}

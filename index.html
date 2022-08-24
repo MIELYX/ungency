@@ -313,7 +313,7 @@
                         <div class="contact__form">
                             <h4 class="title title-h4 contact__form-title">Got an interesting idea?</h4>
 
-                            <form action="https://formsubmit.co/contact@ungency.net" method="POST">
+                            <form class="form" action="https://formsubmit.co/712b6bb6af242be13e0be2b15785cb6a" method="POST">
 
 
                                 <label class="text contact__form-label">Name and Surname</label>
@@ -352,8 +352,14 @@
                                             class="text text-other text-gradient">Send</span>
                                     </div>
                                 </button>
-
+                                <input type="hidden" name="_next" value="">
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_next" value="https://ungency.net/">
                             </form>
+                            <div class="contact__form-alert hidden">
+                                <img src="./img/Alert/Icon/Error.svg" alt="" loading="lazy">
+                                <p class="text">You must accept the privacy policy </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -381,7 +387,7 @@
                     <a href="https://twitter.com/UngencyCrypto" target="_blank"><img src="./img/twitter-icon.svg" alt=""
                             loading="lazy"></a>
                 </div>
-                <div><a class="text text-600" href="#">Privacy Policy</a></div>
+                <div><a class="text text-600" href="./privacy-policy.html">Privacy Policy</a></div>
             </div>
         </div>
     </footer>

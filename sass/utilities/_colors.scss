@@ -11,13 +11,22 @@ $primary-reverse-gradient: linear-gradient(
 	#580689 93.64%,
 	#480689 102.46%
 );
-$primary-outline-gradient: linear-gradient(200deg, #d4088c 14.65%, #cb078b 17.48%, #85068a 47.18%, #580689 68.39%, #480689 79%);
+$primary-outline-gradient: linear-gradient(
+	200deg,
+	#d4088c 14.65%,
+	#cb078b 17.48%,
+	#85068a 47.18%,
+	#580689 68.39%,
+	#480689 79%
+);
 
 $profile-img-shadow: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.04)) drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.08));
 $text-color: #fff;
 $reverse-button-color: #fff;
 $slide-out-nav-color: $primary-color;
-$fotter-color: rgba(255, 255, 255, 0.05);
 $placeholder-color: #acb5bd;
-$laptop-shadow:  drop-shadow(0px 0px 25px rgba(167, 6, 138, 0.8));
+$laptop-shadow: drop-shadow(0px 0px 25px rgba(167, 6, 138, 0.8));
 $input-gradient: linear-gradient(white, white padding-box, $primary-gradient);
+$alert-body-color: rgba(240, 61, 62, 0.1);
+$alert-text-color: #F03D3E;
+$fotter-color: rgb(255, 255, 255, 0.05)
