@@ -9,6 +9,11 @@ body {
 	color: $text-color;
 }
 
+a:focus{
+	outline: 2px solid $text-color;
+	border-radius: 10px;
+}
+
 .hero,
 .about,
 .team,

@@ -613,6 +613,11 @@ body {
   color: #fff;
 }
 
+a:focus {
+  outline: 2px solid #fff;
+  border-radius: 10px;
+}
+
 .hero,
 .about,
 .team,
