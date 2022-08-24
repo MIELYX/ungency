@@ -56,7 +56,8 @@ handleCurrentYear()
 btnLeft.addEventListener('click', slider)
 btnRight.addEventListener('click', slider)
 hamburger.addEventListener('click', slideOut)
+slideOutItems.forEach(item => item.addEventListener('click', slideOut))
+
 italianPizza.addEventListener('click', swaper)
 justYou.addEventListener('click', swaper)
-
 submit.addEventListener('click', alertShow)
