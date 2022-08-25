@@ -11,6 +11,7 @@ const form = document.querySelector('.form')
 const submit = document.querySelector('.contact__form-btn')
 const alert = document.querySelector('.contact__form-alert')
 const checkbox = document.querySelector('.checkbox__input')
+const works = document.querySelector('.works__items')
 
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear()
@@ -52,6 +53,15 @@ const alertShow = () => {
 	}
 }
 
+const animationChange = () => {
+	const vWidth = window.innerWidth
+	if(vWidth < 1200){
+		works.setAttribute('data-aos', 'fade-up')
+	}
+}
+
+
+animationChange()
 handleCurrentYear()
 btnLeft.addEventListener('click', slider)
 btnRight.addEventListener('click', slider)
