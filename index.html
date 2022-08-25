@@ -7,12 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@800&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/svg" href="./img/fav-icon.svg">
     <title>Ungency | Team creating and developing digital products for the Blockchain world</title>
-    <meta name="description"
-        content="We plan, design, program your technology ideas and make them see the light of day. Simply digital products - websites for the Blockchain world.">
+    <meta name="description" content="We plan, design, program your technology ideas and make them see the light of day. Simply digital products - websites for the Blockchain world.">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
@@ -54,12 +53,12 @@
             <div class="container">
                 <div class="hero__box">
                     <div class="hero__textbox">
-                        <h1 class="title text-width">Creating websites from your <span
+                        <h1 class="title text-width" data-aos="fade-up" data-aos-duration="3000">Creating websites from your <span
                                 class="title title-gradient">great ideas</span></h1>
-                        <p class="text hero__text text-width-hero">We plan, design, program your technology
+                        <p class="text hero__text text-width-hero" data-aos="fade-up" data-aos-duration="3000"  data-aos-delay="1000">We plan, design, program your technology
                             ideas and make them see the light of day. Simply digital products for the Blockchain world.
                         </p>
-                        <a href="#contact" class="btn hero__btn">
+                        <a href="#contact" class="btn hero__btn" data-aos="fade-up" data-aos-duration="3000" data-aos-delay="2000">
                             <div class="btn__front"><span class="text text-other">Request a quote</span></div>
                             <div class="btn__reverse"><span class="text text-other text-gradient">Request a quote</span>
                             </div>
@@ -313,8 +312,6 @@
                                             loading="lazy"></a>
                                     <a href="https://www.instagram.com/ungency/" target="_blank"><img
                                             src="./img/instagram-icon.svg" alt="Link to ungency instagram"></a>
-                                    <a href="" target="_blank"><img src="./img/facebook-icon.svg"
-                                            alt="Link to ungency facebook" loading="lazy"></a>
                                     <a href="https://twitter.com/UngencyCrypto" target="_blank"><img
                                             src="./img/twitter-icon.svg" alt="Link to ungency twitter"
                                             loading="lazy"></a>
@@ -396,8 +393,6 @@
                             alt="Link to ungency dribbble" loading="lazy"></a>
                     <a href="https://www.instagram.com/ungency/" target="_blank"><img src="./img/instagram-icon.svg"
                             alt="Link to ungency instagram" loading="lazy"></a>
-                    <a href="#" target="_blank"><img src="./img/facebook-icon.svg" alt="Link to ungency facebook"
-                            loading="lazy"></a>
                     <a href="https://twitter.com/UngencyCrypto" target="_blank"><img src="./img/twitter-icon.svg"
                             alt="Link to ungency twitter" loading="lazy"></a>
                 </div>
@@ -405,6 +400,10 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="./js/main.js"></script>
 </body>
 

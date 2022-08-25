@@ -209,7 +209,7 @@ table {
 
 .btn {
   position: relative;
-  display: inline;
+  display: block;
 }
 .btn__front, .btn__reverse {
   padding: 0.5em 1em;
