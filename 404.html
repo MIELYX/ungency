@@ -9,19 +9,135 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./css/main.css">
     <link rel="shortcut icon" type="image/svg" href="./img/fav-icon.svg">
-    <title>Ungency.eu</title>
+    <title>Ungency.net</title>
     <style>
-        body {
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
             background-color: #1c0b4e;
-            font-size: 'Inter';
+        }
+
+        a {
+            color: #fff;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1c0b4e;
+            color: #fff;
+            font-family: 'Inter';
+            height: 100vh;
+            overflow: hidden;
+            padding: 40px;
+        }
+
+        img {
+            width: 60%;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Poppins';
+            font-size: 48px;
+        }
+
+        p,
+        text {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .text-gradient {
+            background: linear-gradient(200deg,
+                    #d4088c 14.65%,
+                    #cb078b 17.48%,
+                    #85068a 47.18%,
+                    #580689 68.39%,
+                    #480689 79%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn {
+            position: relative;
+            display: inline;
+            margin-top: 58px;
+        }
+
+        .btn__front {
+            padding: 0.5em 1em;
+            border-radius: 10px;
+        }
+
+        .btn__reverse {
+            padding: 0.5em 1em;
+            border-radius: 10px;
+        }
+
+        .btn__front {
+            position: absolute;
+            border-radius: 8px;
+            opacity: 1;
+            background-image: linear-gradient(225deg, #d4088c 14.65%, #cb078b 17.48%, #85068a 47.18%, #580689 68.39%, #480689 79%);
+            ;
+            transition: opacity 0.3s;
+        }
+
+        .btn__reverse {
+            display: inline-block;
+            background-color: #fff;
+        }
+
+
+        .btn__text--gradient {
+            background: linear-gradient(136.67deg,
+                    #d4088c 48.95%,
+                    #cb078b 51.3%,
+                    #85068a 76%,
+                    #580689 93.64%,
+                    #480689 102.46%);
+            ;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .btn:hover .btn__front {
+            opacity: 0;
         }
     </style>
 </head>
-<img src="./img/" alt="">
-<body>
 
+<body>
+    <div class="box">
+        <img src="https://github.com/MIELYX/ungency/blob/main/img/astronaut.png?raw=true" alt="">
+        <div class="box">
+            <h1>Oops, looks like the page is lost.</h1>
+            <p>This is not a fault, just an accident that was not intentional.</p>
+            <a href="https://ungency.net/" class="btn nav__btn item">
+                <div class="btn__front"><span class="text text-other text-other-slide">Back to home page</span></div>
+                <div class="btn__reverse"><span class="text text-other text-other-slide text-gradient">Back to home
+                        page</span>
+                </div>
+        </div>
+        </a>
+    </div>
 </body>
 
 </html>
