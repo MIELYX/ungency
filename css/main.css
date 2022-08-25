@@ -1109,7 +1109,7 @@ body {
 }
 @media (min-width: 768px) {
   .hero .circlebox-3, .hero .circlebox-4 {
-    display: block;
+    display: flex;
   }
   .sticky-body {
     overflow: visible;
